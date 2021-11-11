@@ -17,8 +17,6 @@ jobs:
       - name: jest test
         with:
             node-version: '14.x'
-
-      - name: Run pnpm i
         run: pnpm i
 
       - name: Run pnpm run test
