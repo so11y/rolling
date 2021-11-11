@@ -26,14 +26,9 @@ jobs:
           path: node_modules
           key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
 
-
-      - name: add pnpm
+      - name: npm i
         if: steps.cache.outputs.cache-hit != 'true'
-        run: npm i pnpm -g
-
-      - name: pnpm i
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: pnpm i
+        run: npm i
 
       - name: test
-        run: npx jest & pnpm run coverage
+        run: npx jest & npm run coverage
