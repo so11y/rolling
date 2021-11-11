@@ -1,17 +1,24 @@
+name: CI
 
-name: TEST
 on:
   push:
     branches: [ main ]
   pull_request:
     branches: [ main ]
+
+  workflow_dispatch:
+
 jobs:
-  test:
-     runs-on: ubuntu-latest
-     steps:
-      - name: jest test
-      - uses: actions/setup-node@v1
-        with:
-            node-version: '14.x'
-      - run: pnpm i
-      - run: pnpm run test
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Run a one-line script
+        run: echo Hello, world!
+
+      - name: Run a multi-line script
+        run: |
+          echo Add other actions to build,
+          echo test, and deploy your project.
