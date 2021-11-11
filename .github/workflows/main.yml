@@ -19,5 +19,8 @@ jobs:
             node-version: '14.x'
         run: pnpm i
 
+      - uses: actions/setup-node@v1
       - name: Run pnpm run test
+        with:
+            node-version: '14.x'
         run: pnpm run test
