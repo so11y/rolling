@@ -1,5 +1,5 @@
 
-name: CI
+name: test
 
 on:
   push:
@@ -10,7 +10,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  build:
+  testCommit:
     runs-on: ubuntu-latest
 
     steps:
