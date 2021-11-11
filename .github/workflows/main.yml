@@ -31,8 +31,8 @@ jobs:
         run: npm i pnpm -g
 
       # Runs a set of commands using the runners shell
-      - name: pnpm i
-        run: cd ts-loadsh && pnpm i
+      - name: npm i
+        run: npm i
 
       - name: test
-        run: pnpm run test
+        run: npm run test
