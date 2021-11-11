@@ -19,11 +19,16 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: add pnpm
-        run: npm i pnpm -g
+      - name: Cahe Node Dependencies
+        id: cache
+        uses: actions/cache@v1
+        with:
+          path: node_modules
+          key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
 
-      - name: pnpm i
-        run: pnpm i
+      - name: npm i
+        if: steps.cache.outputs.cache-hit != 'true'
+        run: npm i
 
       - name: test
-        run: npx jest & pnpm run coverage
+        run: npx jest & npm run coverage
