@@ -13,12 +13,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/setup-node@v1
+      - name: jest test
+        with:
+            node-version: '14.x'
 
-      - name: Run a one-line script
-        run: echo Hello, world!
+      - name: Run pnpm i
+        run: pnpm i
 
-      - name: Run a multi-line script
-        run: |
-          echo Add other actions to build,
-          echo test, and deploy your project.
+      - name: Run pnpm run test
+        run: pnpm run test
