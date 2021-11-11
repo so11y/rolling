@@ -1,9 +1,12 @@
 {
     "compilerOptions": {
-      "target": "esnext",
-      "module": "esnext",
-      "baseUrl": "./",
-      "esModuleInterop": true
+        "target": "esnext",
+        "module": "esnext",
+        "baseUrl": "./",
+        "esModuleInterop": true,
+        "declaration": true,
     },
-    "exclude": ["node_modules"],
+    "exclude": [
+        "node_modules"
+    ],
 }
