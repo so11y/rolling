@@ -9,9 +9,6 @@
         "lint:fix": "eslint --fix",
         "coverage": "jest --coverage"
     },
-    "lint-staged": {
-        "*.js": "eslint --fix"
-    },
     "author": "",
     "license": "ISC",
     "devDependencies": {
