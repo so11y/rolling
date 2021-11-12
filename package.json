@@ -6,7 +6,7 @@
     "scripts": {
         "build": "node ./packages/build/rollupBuild.js",
         "test": "jest --watchAll",
-        "lint:fix": "eslint --fix packages/**/*.ts",
+        "lint:fix": "eslint --fix",
         "coverage": "jest --coverage"
     },
     "author": "",
