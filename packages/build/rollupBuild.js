@@ -24,6 +24,7 @@ async function build() {
 	await bundle.generate(outputOptions);
 	await bundle.write(outputOptions);
 	fs.unlink(path.join(__dirname, './index.ts'));
+	//
 }
 
 build();
