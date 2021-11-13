@@ -1,6 +1,6 @@
 const rollup = require('rollup');
 const path = require('path');
-const craeteIndexFile = require('./genCodeIndex');
+const { craeteIndexFile, copyShare } = require('./genCodeIndex');
 const typeScriptPlugin = require('rollup-plugin-typescript2');
 const fs = require('fs/promises');
 const outputOptions = {
@@ -23,6 +23,7 @@ async function build() {
 	});
 	await bundle.generate(outputOptions);
 	await bundle.write(outputOptions);
+	await copyShare();
 	fs.unlink(path.join(__dirname, './index.ts'));
 }
 
