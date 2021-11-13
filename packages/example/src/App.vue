@@ -9,7 +9,9 @@ export default defineComponent({
 });
 </script>
 
-<template><Layout /></template>
+<template>
+	<Layout />
+</template>
 
 <style lang="scss">
 </style>
