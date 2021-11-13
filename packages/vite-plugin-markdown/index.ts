@@ -1,6 +1,5 @@
 import markdown from 'markdown-it';
 import hljs from 'highlight.js';
-import type { Plugin } from 'vite';
 
 function highlight(str, lang) {
 	if (lang && hljs.getLanguage(lang)) {
@@ -24,7 +23,7 @@ const genMarkdown = (source) => {
 	return `<template><div class="pl-4 pr-4 md-content">${mdToHtml}</div></template>`;
 };
 
-export default function vitePluginMarkdown(): Plugin {
+export default function vitePluginMarkdown() {
 	return {
 		name: 'vite-plugin-markdown',
 		enforce: 'pre',

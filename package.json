@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
+        "instllPack": "node ./scripts/index.mjs",
         "build": "node ./packages/build/rollupBuild.js",
         "test": "jest --watchAll",
         "lint:fix": "eslint --fix",
