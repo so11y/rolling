@@ -17,9 +17,9 @@ function runnerInstall(cwd) {
 	});
 }
 
-async function run() {
-	await runnerInstall(ContentCwd);
-	await runnerInstall(ExampleCwd);
-	await runnerInstall(vitePluginMarkdownCwd);
+function run() {
+	runnerInstall(ContentCwd);
+	runnerInstall(ExampleCwd);
+	runnerInstall(vitePluginMarkdownCwd);
 }
 run();
