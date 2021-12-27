@@ -12,3 +12,5 @@ export { default as runners } from './runners';
 export { default as take } from './take';
 export { default as takeWhile } from './takeWhile';
 export { default as where } from './where';
+export { default as isString } from './isString';
+export { default as isObject } from './isObject';
