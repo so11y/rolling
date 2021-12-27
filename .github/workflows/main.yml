@@ -19,16 +19,8 @@ jobs:
         with:
           node-version: '14.x'
 
-      - name: Cahe Node Dependencies
-        id: cache
-        uses: actions/cache@v1
-        with:
-          path: node_modules
-          key: ${{runner.OS}}-npm-caches-${{ hashFiles('package-lock.json') }}
-
       - name: npm i
-        if: steps.cache.outputs.cache-hit != 'true'
-        run: npm i
+        run: cd packages/es && npm i
 
       - name: test
-        run: npx jest & npm run coverage
+        run: cd packages/es && npx jest && npm run coverage
