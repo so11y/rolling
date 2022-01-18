@@ -1,13 +1,13 @@
 {
     "name": "rolling-way",
-    "version": "0.0.5",
+    "version": "0.0.6",
     "description": "javascript util function",
     "author": {
         "name": "zrrz",
         "email": "247076126@qq.com"
     },
-    "main": "dist/rolling.esm-browser.js",
-    "types": "dist/rolling.d.ts",
+    "main": "dist/rolling-way.esm-browser.js",
+    "types": "dist/index.d.ts",
     "scripts": {
         "test": "jest --watchAll",
         "build": "rollup --config",
@@ -16,15 +16,15 @@
     },
     "exports": {
         ".": {
-            "browser": "./dist/rolling.esm-browser.js",
+            "browser": "./dist/rolling-way.esm-browser.js",
             "node": {
                 "import": {
-                    "production": "./dist/rolling.prod.js",
-                    "development": "./dist/rolling.esm-browser.js",
-                    "default": "./dist/rolling.esm-browser.js"
+                    "production": "./dist/rolling-way.prod.js",
+                    "development": "./dist/rolling-way.esm-browser.js",
+                    "default": "./dist/rolling-way.esm-browser.js"
                 }
             },
-            "import": "./dist/rolling.esm-browser.js"
+            "import": "./dist/rolling-way.esm-browser.js"
         },
         "./package.json": "./package.json",
         "./dist/*": "./dist/*"
